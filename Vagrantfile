@@ -37,7 +37,7 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "..", "/project"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -104,5 +104,5 @@ Vagrant.configure(2) do |config|
      sudo mv gcc-arm-none-eabi-4_8-2014q1 /usr/local/
      echo 'export PATH=/usr/local/gcc-arm-none-eabi-4_8-2014q1/bin:$PATH' >> /home/vagrant/.bashrc
      export PATH=/usr/local/gcc-arm-none-eabi-4_8-2014q1/bin:$PATH
-  SHELL
+ SHELL
 end
